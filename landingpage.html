@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATICA / PENTÁGONO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <header>
+        <div class="logo">
+            <span class="logo-mark">◈</span> 4TO BIMESTRE / PENTÁGONO
+        </div>
+        <nav id="grade-filters">
+            <button class="nav-btn active" onclick="filterGrade('all', this)">★ Destacados</button>
+            <button class="nav-btn" onclick="filterGrade('1sec', this)">1° Sec</button>
+            <button class="nav-btn" onclick="filterGrade('2sec', this)">2° Sec</button>
+            <button class="nav-btn" onclick="filterGrade('3sec', this)">3° Sec</button>
+            <button class="nav-btn" onclick="filterGrade('4sec', this)">4° Sec</button>
+            <button class="nav-btn" onclick="filterGrade('5sec', this)">5° Sec</button>
+        </nav>
+    </header>
+
+    <!-- Título Principal -->
+    <div class="hero">
+        <p class="eyebrow">/// SISTEMA DE EXHIBICIÓN DIGITAL 2026</p>
+        <h1 class="section-title" id="gallery-title">TRABAJOS <span>DESTACADOS</span></h1>
+        <p class="hero-copy">Explora las ideas, experimentos y proyectos que están construyendo el futuro digital desde las aulas del Colegio Pentágono.</p>
+        <div class="hero-stats" aria-label="Resumen de la exposición">
+            <div class="stat"><strong>04</strong><small>Proyectos activos</small></div>
+            <div class="stat"><strong>03</strong><small>Especialidades</small></div>
+            <div class="stat"><strong>∞</strong><small>Creatividad</small></div>
+        </div>
+    </div>
+
+    <!-- Galería de Proyectos -->
+    <div class="projects-grid" id="projects-container">
+        <!-- Los proyectos se cargan dinámicamente con JS -->
+    </div>
+
+    <footer>
+        <p>Área de Informática y Computación - Colegio Pentágono</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
