@@ -49,6 +49,16 @@ const projects = [
     }
 ];
 
+const gradeNames = {
+    '1sec-gamma': '1° de Secundaria - Gamma',
+    '1sec-delta': '1° de Secundaria - Delta',
+    '2sec-gamma': '2° de Secundaria - Gamma',
+    '2sec-delta': '2° de Secundaria - Delta',
+    '3sec': '3° de Secundaria',
+    '4sec': '4° de Secundaria',
+    '5sec': '5° de Secundaria'
+};
+
 function renderProjects(data) {
     const container = document.getElementById('projects-container');
     container.innerHTML = '';
@@ -67,7 +77,7 @@ function renderProjects(data) {
                 ${project.featured ? '<span class="badge-featured">Destacado</span>' : ''}
             </div>
             <div class="card-body">
-                <div class="student-info">${project.student} • ${project.grade.toUpperCase()}</div>
+                <div class="student-info">${project.student} • ${gradeNames[project.grade] || project.grade.toUpperCase()}</div>
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-desc">${project.desc}</p>
                 <div class="tech-tags">
@@ -81,9 +91,10 @@ function renderProjects(data) {
 }
 
 function filterGrade(grade, selectedButton) {
-    const buttons = document.querySelectorAll('.nav-btn');
+    const buttons = document.querySelectorAll('.nav-btn, .grade-option');
     buttons.forEach(button => button.classList.remove('active'));
     selectedButton.classList.add('active');
+    closeGradeMenus();
 
     const title = document.getElementById('gallery-title');
 
@@ -93,19 +104,35 @@ function filterGrade(grade, selectedButton) {
         return;
     }
 
-    const gradeNames = {
-        '1sec': '1° de Secundaria',
-        '2sec': '2° de Secundaria',
-        '3sec': '3° de Secundaria',
-        '4sec': '4° de Secundaria',
-        '5sec': '5° de Secundaria'
-    };
-
-    title.innerHTML = `PROYECTOS <span>${gradeNames[grade].toUpperCase()}</span>`;
+    const selectedGradeName = gradeNames[grade] || 'Curso seleccionado';
+    title.innerHTML = `PROYECTOS <span>${selectedGradeName.toUpperCase()}</span>`;
     renderProjects(projects.filter(project => project.grade === grade));
 }
 
 renderProjects(projects.filter(project => project.featured));
+
+const gradeParents = document.querySelectorAll('.grade-parent');
+
+function closeGradeMenus() {
+    document.querySelectorAll('.grade-menu').forEach(menu => {
+        menu.hidden = true;
+    });
+    gradeParents.forEach(parent => {
+        parent.setAttribute('aria-expanded', 'false');
+    });
+}
+
+gradeParents.forEach(parent => {
+    parent.addEventListener('click', event => {
+        event.stopPropagation();
+        const menu = document.getElementById(parent.getAttribute('aria-controls'));
+        const isOpen = parent.getAttribute('aria-expanded') === 'true';
+
+        closeGradeMenus();
+        parent.setAttribute('aria-expanded', String(!isOpen));
+        menu.hidden = isOpen;
+    });
+});
 
 const themeToggle = document.getElementById('theme-toggle');
 const themeMenu = document.getElementById('theme-menu');
@@ -153,6 +180,10 @@ themeOptions.forEach(option => {
 });
 
 document.addEventListener('click', event => {
+    if (!event.target.closest('.grade-dropdown')) {
+        closeGradeMenus();
+    }
+
     if (!event.target.closest('.theme-picker')) {
         themeToggle.setAttribute('aria-expanded', 'false');
         themeMenu.hidden = true;

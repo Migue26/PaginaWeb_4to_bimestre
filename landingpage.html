@@ -21,8 +21,24 @@
         </div>
         <nav id="grade-filters">
             <button class="nav-btn active" onclick="filterGrade('all', this)">★ Destacados</button>
-            <button class="nav-btn" onclick="filterGrade('1sec', this)">1° Sec</button>
-            <button class="nav-btn" onclick="filterGrade('2sec', this)">2° Sec</button>
+            <div class="grade-dropdown">
+                <button class="nav-btn grade-parent" type="button" aria-expanded="false" aria-controls="first-grade-menu">
+                    1° Sec <span class="dropdown-arrow">▾</span>
+                </button>
+                <div class="grade-menu" id="first-grade-menu" hidden>
+                    <button class="grade-option" type="button" onclick="filterGrade('1sec-gamma', this)">1° Gamma</button>
+                    <button class="grade-option" type="button" onclick="filterGrade('1sec-delta', this)">1° Delta</button>
+                </div>
+            </div>
+            <div class="grade-dropdown">
+                <button class="nav-btn grade-parent" type="button" aria-expanded="false" aria-controls="second-grade-menu">
+                    2° Sec <span class="dropdown-arrow">▾</span>
+                </button>
+                <div class="grade-menu" id="second-grade-menu" hidden>
+                    <button class="grade-option" type="button" onclick="filterGrade('2sec-gamma', this)">2° Gamma</button>
+                    <button class="grade-option" type="button" onclick="filterGrade('2sec-delta', this)">2° Delta</button>
+                </div>
+            </div>
             <button class="nav-btn" onclick="filterGrade('3sec', this)">3° Sec</button>
             <button class="nav-btn" onclick="filterGrade('4sec', this)">4° Sec</button>
             <button class="nav-btn" onclick="filterGrade('5sec', this)">5° Sec</button>

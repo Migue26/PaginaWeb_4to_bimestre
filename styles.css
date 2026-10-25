@@ -386,6 +386,59 @@ nav {
     justify-content: flex-end;
 }
 
+.grade-dropdown {
+    position: relative;
+}
+
+.grade-parent {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+}
+
+.grade-parent[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.grade-menu {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 0;
+    z-index: 1100;
+    min-width: 145px;
+    padding: 0.4rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(9, 13, 27, 0.97);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 22px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.grade-option {
+    width: 100%;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.55rem 0.6rem;
+    text-align: left;
+    font: 500 0.8rem 'Space Grotesk', sans-serif;
+    white-space: nowrap;
+}
+
+.grade-option:hover,
+.grade-option.active {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+}
+
 .nav-btn {
     background: transparent;
     border: 1px solid var(--line);
