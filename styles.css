@@ -13,6 +13,128 @@
     --tag-js: #d6ff4b;
     --tag-py: #45b8ff;
     --tag-app: #b777ff;
+    --grid-line: rgba(0, 229, 255, 0.035);
+    --glow-primary: rgba(0, 229, 255, 0.8);
+    --glow-secondary: rgba(240, 45, 206, 0.5);
+    --header-bg: rgba(6, 9, 20, 0.78);
+    --cover-logo: url('https://cdn.simpleicons.org/kalilinux/00e5ff');
+    --theme-icon: url('https://cdn.simpleicons.org/kalilinux/00e5ff');
+    --matrix-color: #00e5ff;
+}
+
+[data-theme="ubuntu"] {
+    --bg-primary: #160b1c;
+    --bg-secondary: #24102b;
+    --bg-card: rgba(48, 20, 54, 0.82);
+    --line: rgba(233, 84, 32, 0.34);
+    --accent: #e95420;
+    --accent-hover: #ff9a70;
+    --pink: #77216f;
+    --lime: #f6d32d;
+    --text-secondary: #d4a9c8;
+    --tag-html: #e95420;
+    --tag-js: #f6d32d;
+    --tag-py: #64b5f6;
+    --tag-app: #c061cb;
+    --grid-line: rgba(233, 84, 32, 0.045);
+    --glow-primary: rgba(233, 84, 32, 0.85);
+    --glow-secondary: rgba(119, 33, 111, 0.75);
+    --header-bg: rgba(22, 11, 28, 0.84);
+    --cover-logo: url('https://cdn.simpleicons.org/ubuntu/e95420');
+    --theme-icon: url('https://cdn.simpleicons.org/ubuntu/e95420');
+    --matrix-color: #e95420;
+}
+
+[data-theme="redhat"] {
+    --bg-primary: #120608;
+    --bg-secondary: #210b0e;
+    --bg-card: rgba(46, 15, 20, 0.84);
+    --line: rgba(238, 50, 61, 0.34);
+    --accent: #ee3338;
+    --accent-hover: #ff7777;
+    --pink: #ffb3b3;
+    --lime: #f2c94c;
+    --text-secondary: #d5a7ab;
+    --tag-html: #ee3338;
+    --tag-js: #f2c94c;
+    --tag-py: #6bb7e8;
+    --tag-app: #d77a9a;
+    --grid-line: rgba(238, 50, 61, 0.045);
+    --glow-primary: rgba(238, 50, 61, 0.85);
+    --glow-secondary: rgba(255, 179, 179, 0.45);
+    --header-bg: rgba(18, 6, 8, 0.84);
+    --cover-logo: url('https://cdn.simpleicons.org/redhat/ee3338');
+    --theme-icon: url('https://cdn.simpleicons.org/redhat/ee3338');
+    --matrix-color: #ee3338;
+}
+
+[data-theme="mint"] {
+    --bg-primary: #061512;
+    --bg-secondary: #0b211c;
+    --bg-card: rgba(13, 45, 37, 0.82);
+    --line: rgba(141, 214, 0, 0.32);
+    --accent: #8ed100;
+    --accent-hover: #c5f45a;
+    --pink: #2ec27e;
+    --lime: #c5f45a;
+    --text-secondary: #a7c7b7;
+    --tag-html: #e95420;
+    --tag-js: #c5f45a;
+    --tag-py: #45b8ff;
+    --tag-app: #2ec27e;
+    --grid-line: rgba(141, 214, 0, 0.045);
+    --glow-primary: rgba(141, 214, 0, 0.8);
+    --glow-secondary: rgba(46, 194, 126, 0.6);
+    --header-bg: rgba(6, 21, 18, 0.84);
+    --cover-logo: url('https://cdn.simpleicons.org/linuxmint/8ed100');
+    --theme-icon: url('https://cdn.simpleicons.org/linuxmint/8ed100');
+    --matrix-color: #8ed100;
+}
+
+[data-theme="parrot"] {
+    --bg-primary: #061014;
+    --bg-secondary: #0b1d22;
+    --bg-card: rgba(12, 42, 48, 0.82);
+    --line: rgba(0, 190, 190, 0.34);
+    --accent: #00c2c7;
+    --accent-hover: #72ffff;
+    --pink: #00a8a8;
+    --lime: #a8e063;
+    --text-secondary: #9fc5c7;
+    --tag-html: #ff8a4c;
+    --tag-js: #a8e063;
+    --tag-py: #70b7ff;
+    --tag-app: #c084fc;
+    --grid-line: rgba(0, 194, 199, 0.045);
+    --glow-primary: rgba(0, 194, 199, 0.85);
+    --glow-secondary: rgba(168, 224, 99, 0.55);
+    --header-bg: rgba(6, 16, 20, 0.84);
+    --cover-logo: url('https://cdn.simpleicons.org/parrotsecurity/00c2c7');
+    --theme-icon: url('https://cdn.simpleicons.org/parrotsecurity/00c2c7');
+    --matrix-color: #00c2c7;
+}
+
+[data-theme="purple"] {
+    --bg-primary: #0d071b;
+    --bg-secondary: #170d2e;
+    --bg-card: rgba(36, 19, 68, 0.84);
+    --line: rgba(190, 105, 255, 0.36);
+    --accent: #d08cff;
+    --accent-hover: #efc7ff;
+    --pink: #ff4fd8;
+    --lime: #b4ff6c;
+    --text-secondary: #c0acd9;
+    --tag-html: #ff6b9d;
+    --tag-js: #b4ff6c;
+    --tag-py: #7db7ff;
+    --tag-app: #d08cff;
+    --grid-line: rgba(190, 105, 255, 0.05);
+    --glow-primary: rgba(208, 140, 255, 0.85);
+    --glow-secondary: rgba(255, 79, 216, 0.6);
+    --header-bg: rgba(13, 7, 27, 0.84);
+    --cover-logo: url('https://cdn.simpleicons.org/kalilinux/d08cff');
+    --theme-icon: url('https://cdn.simpleicons.org/kalilinux/d08cff');
+    --matrix-color: #d08cff;
 }
 
 * {
@@ -24,10 +146,11 @@
 html { scroll-behavior: smooth; }
 
 body {
+    position: relative;
     background-color: var(--bg-primary);
     background-image:
-        linear-gradient(rgba(0, 229, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 229, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
         radial-gradient(circle at 82% 8%, rgba(168, 85, 247, 0.16), transparent 28rem),
         radial-gradient(circle at 12% 35%, rgba(0, 229, 255, 0.08), transparent 24rem);
     background-size: 42px 42px, 42px 42px, auto, auto;
@@ -36,11 +159,101 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.matrix-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.28;
+}
+
+.kali-cover {
+    min-height: min(620px, 78vh);
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at center, rgba(30, 42, 76, 0.18), rgba(4, 7, 17, 0.24) 72%),
+        rgba(7, 11, 23, 0.16);
+}
+
+.kali-cover::before {
+    content: '';
+    position: absolute;
+    inset: -2rem;
+    z-index: -2;
+    background: var(--cover-logo) center / min(58vw, 560px) no-repeat;
+    background-color: transparent;
+    opacity: 0.55;
+    filter: blur(5px);
+    transform: scale(1.05);
+}
+
+.kali-cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(0, 229, 255, 0.07), transparent 35%, transparent 65%, rgba(240, 45, 206, 0.07)),
+        linear-gradient(rgba(6, 9, 20, 0.06), rgba(6, 9, 20, 0.12)),
+        repeating-linear-gradient(0deg, transparent 0 3px, rgba(255, 255, 255, 0.012) 4px);
+}
+
+.kali-cover-overlay {
+    position: absolute;
+    inset: 12%;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.1), inset 0 0 35px rgba(0, 229, 255, 0.08);
+    pointer-events: none;
+}
+
+.kali-cover-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.kali-cover-label {
+    margin-bottom: 1.25rem;
+    color: var(--lime);
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(0.62rem, 1.5vw, 0.8rem);
+    letter-spacing: 0.22em;
+}
+
+.kali-cover h1 {
+    color: var(--text-primary);
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.8rem, 9vw, 7.8rem);
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9),
+        0 0 28px rgba(0, 229, 255, 0.8),
+        0 0 65px rgba(240, 45, 206, 0.5);
+}
+
+.kali-cover-line {
+    display: block;
+    width: min(230px, 55vw);
+    height: 3px;
+    margin: 1.5rem auto 0;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--pink), transparent);
+    box-shadow: 0 0 18px var(--accent);
+}
+
 header {
     position: sticky;
     top: 0;
-    z-index: 100;
-    background: rgba(6, 9, 20, 0.78);
+    z-index: 1000;
+    background: var(--header-bg);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--line);
     padding: 1rem clamp(1.25rem, 4vw, 4rem);
@@ -50,6 +263,104 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+.theme-picker {
+    position: relative;
+    order: 3;
+    z-index: 1001;
+}
+
+.theme-toggle {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--accent);
+    cursor: pointer;
+    padding: 0.55rem 0.85rem;
+    font: 600 0.75rem 'Space Grotesk', sans-serif;
+    letter-spacing: 0.08em;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle[aria-expanded="true"] {
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.theme-toggle-icon {
+    color: var(--pink);
+    margin-right: 0.25rem;
+}
+
+.theme-menu {
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    right: 0;
+    z-index: 1100;
+    width: 210px;
+    padding: 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(9, 13, 27, 0.97);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 22px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.theme-menu-title {
+    padding: 0.35rem 0.5rem 0.6rem;
+    color: var(--text-secondary);
+    font: 600 0.62rem 'Orbitron', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.theme-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.55rem 0.5rem;
+    text-align: left;
+    font: 500 0.82rem 'Space Grotesk', sans-serif;
+}
+
+.theme-option:hover,
+.theme-option.active {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+}
+
+.theme-swatch {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    border-radius: 0;
+    background: var(--theme-icon) center / contain no-repeat;
+    box-shadow: none;
+    filter: drop-shadow(0 0 5px var(--accent));
+}
+
+.kali-swatch,
+.ubuntu-swatch,
+.redhat-swatch,
+.mint-swatch,
+.parrot-swatch,
+.purple-swatch {
+    color: var(--accent);
+}
+
+.kali-swatch { background-image: url('https://cdn.simpleicons.org/kalilinux/00e5ff'); }
+.ubuntu-swatch { background-image: url('https://cdn.simpleicons.org/ubuntu/e95420'); }
+.redhat-swatch { background-image: url('https://cdn.simpleicons.org/redhat/ee3338'); }
+.mint-swatch { background-image: url('https://cdn.simpleicons.org/linuxmint/8ed100'); }
+.parrot-swatch { background-image: url('https://cdn.simpleicons.org/parrotsecurity/00c2c7'); }
+.purple-swatch { background-image: url('https://cdn.simpleicons.org/kalilinux/d08cff'); }
 
 .logo {
     font-family: 'Orbitron', sans-serif;
@@ -315,6 +626,8 @@ footer {
 }
 
 @media (max-width: 760px) {
+    .kali-cover { min-height: 500px; }
+    .kali-cover-overlay { inset: 8%; }
     header { align-items: flex-start; }
     nav { justify-content: flex-start; }
     .hero { padding-top: 3.5rem; }
@@ -322,10 +635,17 @@ footer {
 }
 
 @media (max-width: 520px) {
+    .kali-cover { min-height: 420px; }
+    .kali-cover::before { background-size: 85vw; }
+    .kali-cover-overlay { inset: 6%; }
     header { padding: 1rem; }
     .logo { width: 100%; }
     nav { gap: 0.35rem; }
     .nav-btn { font-size: 0.75rem; padding: 0.45rem 0.6rem; }
     .hero, .projects-grid { padding-left: 1rem; padding-right: 1rem; }
     .hero-stats { gap: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .matrix-canvas { display: none; }
 }

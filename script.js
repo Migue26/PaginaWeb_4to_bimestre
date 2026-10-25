@@ -106,3 +106,112 @@ function filterGrade(grade, selectedButton) {
 }
 
 renderProjects(projects.filter(project => project.featured));
+
+const themeToggle = document.getElementById('theme-toggle');
+const themeMenu = document.getElementById('theme-menu');
+const themeOptions = document.querySelectorAll('.theme-option');
+
+function getSavedTheme() {
+    try {
+        return localStorage.getItem('pentagono-theme') || 'kali';
+    } catch (error) {
+        console.warn('No se pudo leer el tema guardado; se usará Kali Linux.', error);
+        return 'kali';
+    }
+}
+
+function setTheme(themeName) {
+    const availableThemes = [...themeOptions].map(option => option.dataset.theme);
+    if (!availableThemes.includes(themeName)) {
+        themeName = 'kali';
+    }
+
+    document.documentElement.dataset.theme = themeName;
+    try {
+        localStorage.setItem('pentagono-theme', themeName);
+    } catch (error) {
+        console.warn('El tema cambiará solo durante esta visita.', error);
+    }
+
+    themeOptions.forEach(option => {
+        option.classList.toggle('active', option.dataset.theme === themeName);
+    });
+}
+
+themeToggle.addEventListener('click', () => {
+    const isOpen = themeToggle.getAttribute('aria-expanded') === 'true';
+    themeToggle.setAttribute('aria-expanded', String(!isOpen));
+    themeMenu.hidden = isOpen;
+});
+
+themeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        setTheme(option.dataset.theme);
+        themeToggle.setAttribute('aria-expanded', 'false');
+        themeMenu.hidden = true;
+    });
+});
+
+document.addEventListener('click', event => {
+    if (!event.target.closest('.theme-picker')) {
+        themeToggle.setAttribute('aria-expanded', 'false');
+        themeMenu.hidden = true;
+    }
+});
+
+setTheme(getSavedTheme());
+
+const matrixCanvas = document.getElementById('matrix-canvas');
+const matrixContext = matrixCanvas.getContext('2d');
+const matrixCharacters = '01アイウエオカキクケコサシスセソタチツテトABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let matrixColumns = [];
+let matrixAnimationId;
+
+function resizeMatrix() {
+    const scale = window.devicePixelRatio || 1;
+    matrixCanvas.width = window.innerWidth * scale;
+    matrixCanvas.height = window.innerHeight * scale;
+    matrixContext.setTransform(scale, 0, 0, scale, 0, 0);
+
+    const columnCount = Math.ceil(window.innerWidth / 18);
+    matrixColumns = Array.from({ length: columnCount }, () => Math.random() * window.innerHeight / 18);
+}
+
+function drawMatrix() {
+    const computedStyles = getComputedStyle(document.documentElement);
+    const matrixColor = computedStyles.getPropertyValue('--matrix-color').trim() || '#00e5ff';
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    matrixContext.fillStyle = 'rgba(3, 6, 14, 0.08)';
+    matrixContext.fillRect(0, 0, width, height);
+    matrixContext.fillStyle = matrixColor;
+    matrixContext.font = '14px monospace';
+
+    matrixColumns.forEach((y, index) => {
+        const character = matrixCharacters[Math.floor(Math.random() * matrixCharacters.length)];
+        const x = index * 18;
+        matrixContext.fillText(character, x, y * 18);
+
+        if (y * 18 > height && Math.random() > 0.975) {
+            matrixColumns[index] = 0;
+        } else {
+            matrixColumns[index] += 0.55;
+        }
+    });
+
+    matrixAnimationId = requestAnimationFrame(drawMatrix);
+}
+
+function startMatrix() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    resizeMatrix();
+    cancelAnimationFrame(matrixAnimationId);
+    drawMatrix();
+}
+
+window.addEventListener('resize', resizeMatrix);
+startMatrix();

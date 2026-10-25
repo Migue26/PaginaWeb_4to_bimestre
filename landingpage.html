@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFORMATICA / PENTÁGONO</title>
+    <link rel="icon" type="image/svg+xml" href="svg/colegio_pentagono_profesional_1.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <canvas class="matrix-canvas" id="matrix-canvas" aria-hidden="true"></canvas>
 
     <!-- Top Bar -->
     <header>
@@ -24,7 +27,43 @@
             <button class="nav-btn" onclick="filterGrade('4sec', this)">4° Sec</button>
             <button class="nav-btn" onclick="filterGrade('5sec', this)">5° Sec</button>
         </nav>
+        <div class="theme-picker">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-expanded="false" aria-controls="theme-menu">
+                <span class="theme-toggle-icon">◉</span> ESTILO
+            </button>
+            <div class="theme-menu" id="theme-menu" role="menu" hidden>
+                <p class="theme-menu-title">SELECCIONA UN ESTILO</p>
+                <button type="button" class="theme-option active" data-theme="kali" role="menuitem">
+                    <span class="theme-swatch kali-swatch"></span>Kali Linux
+                </button>
+                <button type="button" class="theme-option" data-theme="ubuntu" role="menuitem">
+                    <span class="theme-swatch ubuntu-swatch"></span>Ubuntu
+                </button>
+                <button type="button" class="theme-option" data-theme="redhat" role="menuitem">
+                    <span class="theme-swatch redhat-swatch"></span>Red Hat
+                </button>
+                <button type="button" class="theme-option" data-theme="mint" role="menuitem">
+                    <span class="theme-swatch mint-swatch"></span>Linux Mint
+                </button>
+                <button type="button" class="theme-option" data-theme="parrot" role="menuitem">
+                    <span class="theme-swatch parrot-swatch"></span>Parrot
+                </button>
+                <button type="button" class="theme-option" data-theme="purple" role="menuitem">
+                    <span class="theme-swatch purple-swatch"></span>Kali Purple
+                </button>
+            </div>
+        </div>
     </header>
+    
+     <!-- Portada -->
+    <section class="kali-cover" aria-label="Portada de Informática">
+        <div class="kali-cover-overlay"></div>
+        <div class="kali-cover-content">
+            <p class="kali-cover-label">COLEGIO PENTÁGONO / ÁREA DIGITAL</p>
+            <h1>INFORMÁTICA</h1>
+            <span class="kali-cover-line"></span>
+        </div>
+    </section>
 
     <!-- Título Principal -->
     <div class="hero">
